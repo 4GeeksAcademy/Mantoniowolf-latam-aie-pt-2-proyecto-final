@@ -1,4 +1,4 @@
-# Brasland, cadena de restaurant fundada el año 2008 la cual actualmente cuenta con 14 sucursales, no solo en Colombia, tambien se ha amplido a EEUU en el estado de Florida, siendo una empresa que entrega 115 puestos de trabajo, facturando cerca de los 6 millones de dolares anualmente.  
+### Brasland, cadena de restaurant fundada el año 2008 la cual actualmente cuenta con 14 sucursales, no solo en Colombia, tambien se ha amplido a EEUU en el estado de Florida, siendo una empresa que entrega 115 puestos de trabajo, facturando cerca de los 6 millones de dolares anualmente.  
 
 ## He decidido por esta compañia pues:
 1. Me he desempeñado años dentro del rubro gastronomico, dentro del servicio al cliente como garzon. 
@@ -11,19 +11,36 @@
 ## Marketing y experiencia digital
 1. dentro de este departamento me parece interesante problemas como:
 
-a. lo desactualizado:
+A) lo desactualizado:
 
 pagina web, no contar con el servicio de toma de pedidos dentro de su sitio web, buscando ampliar rango hacia clientes potenciales.
 BrasaPoints funcionado con tarjetas fisicas sin usar esta oportunidad para generar base de datos de sus clientes.
 
-b. la baja calificacion que mantiene en app store.  
+B) la baja calificacion que mantiene en app store.  
 
-# Tecnología 
+## Tecnología 
 2. De este departamento me interesa poder actualizar procesos, los cuales se podrían automitizar y unificar informacion de stock, ventas, estado financiero, etc.
 
-#Formacion y estandarés de calidad
+## Formacion y estandarés de calidad
 3. Dentro de este departamento lo interesante no solo es estandarizar procesos, la formacion por medio de capacitaciones no solo permite tener personal más capacitado, tambien la inversion en base a capacitaciones deduce la carga impositiva.
 
 # El reto de automatizacion
 Dentro de la implementacion de un sistema de administracion, conciderar una gran base de datos unificada, la cual no solo permitiria almacenar información del negocio en sí, también podría manejar registro de los clientes, stock de productos y acceso bajo credenciales para la toma de pedido de los meseros, como también a clientes que decidan usar la app en la realización de órdenes. Base de datos que tambien cumpliria con la finalidad de alimentar a una AI que podría tomar las ordenes de los clientes, ofertar promociones personalizadas o entregar información relevante sobre el negocio a dueños o administradores.
+
+## Mi idea de agente AI
+Dentro de mi imaginacion de un agente se me ocurre que deberia:
+
+1. Estructura, permisos y administración de credenciales de una base de datos la cual alimentará la AI
+2. Manejo de existencias por local bajo base de dato para alimentar AI 
+Información de facturación de las compras alimentando el sistema en cuanto a las existencias y disponibilidad de productos ofertados bajo en tienda del sitio web.
+3. Creando alertas de existencias bajas de stock, por ser adquiridas.
+
+4. Creando alertas sobre existencias vencidas
+Enlazando estas alertas a informacion de facturación junto para acceder por medio de link disponible dentro de estas alertas. (información necesaria para ser adjuntada dentro de la declaración y control de pérdidas.)
+5. El desarrollo de un agente que tenga la misión de atender los pedidos de los clientes, teniendo la particularidad de no solo entender requerimientos de manera personalizada, alimentda bajo base de datos sobre los cliente que mantengan sesion iniciada. también, este agente AI deben tener la misión de actuar como vendedores, ofertando personalizadamente productos, como bebestibles, acompañamientos, promociones o realizando sugerencias a los cliente en cuanto al menú. 
+6. teniendo también, estos agentes AI la particularidad de programar pedidos bajo parametros establecidos por el usuario, donde los pedidos podrian realizarse con horas de anticipacion.
+
+7. Un agente AIpodrían tener control sobre los contrato, personal contratado y personal desvinculado.
+con la ide de crear alertas para actualizar permisos, accesos y/o credenciales por motivos de seguridad.
+
 
