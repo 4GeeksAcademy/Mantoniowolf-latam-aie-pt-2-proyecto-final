@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Reserva tu mesa en Brasland para disfrutar parrilla contemporanea, cocteleria de autor y una experiencia pensada para compartir."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							sans: ["Manrope", "sans-serif"],
+							display: ["Playfair Display", "serif"]
+						},
+						colors: {
+							brand: {
+								cream: "#0f172a",
+								clay: "#0ea5a3",
+								wine: "#1e293b",
+								gold: "#38bdf8",
+								ink: "#e2e8f0"
+							}
+						},
+						boxShadow: {
+							glow: "0 25px 70px rgba(0, 0, 0, 0.45)"
+						}
+					}
+				}
+			}
+		</script>
+		<title>Brasland | reservas</title>
+	</head>
+	<body class="min-h-screen bg-brand-cream font-sans text-brand-ink antialiased">
+		<div class="fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+			<div class="absolute left-[-8rem] top-[-6rem] h-72 w-72 rounded-full bg-brand-gold/15 blur-3xl"></div>
+			<div class="absolute right-[-6rem] top-24 h-80 w-80 rounded-full bg-brand-clay/15 blur-3xl"></div>
+			<div class="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(180deg,rgba(5,8,12,0.96)_0%,rgba(11,17,24,0.88)_52%,rgba(11,17,24,0)_100%)]"></div>
+		</div>
+
+		<a
+			href="#contenido-principal"
+			class="absolute left-4 top-4 z-50 -translate-y-[220%] rounded-full bg-brand-ink px-4 py-3 text-sm font-semibold text-black transition focus:translate-y-0"
+		>
+			Saltar al contenido principal
+		</a>
+
+		<header class="sticky top-0 z-40 mx-auto w-full max-w-4xl px-4 pt-6 sm:px-6 lg:px-8" role="banner">
+			<div class="rounded-2xl border border-white/10 bg-black/40 px-4 py-4 backdrop-blur-xl">
+				<div class="flex items-center justify-between gap-4">
+					<a class="inline-flex items-center gap-3" href="index.html#inicio" aria-label="Ir al inicio de Brasland">
+						<span
+							class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-gold to-brand-clay text-xs font-extrabold tracking-[0.18em] text-white shadow-glow"
+							aria-hidden="true"
+						>
+							BR
+						</span>
+						<span class="grid gap-0.5">
+							<strong class="text-sm uppercase tracking-[0.16em] text-white">Brasland</strong>
+							<span class="text-xs text-white/65">Reservas y eventos</span>
+						</span>
+					</a>
+
+					<button
+						id="menu-toggle"
+						type="button"
+						class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white transition hover:border-brand-gold hover:text-brand-gold md:hidden"
+						aria-expanded="false"
+						aria-controls="site-menu"
+						aria-label="Abrir menu principal"
+					>
+						<span aria-hidden="true" class="text-xl leading-none">☰</span>
+					</button>
+				</div>
+
+				<nav id="site-menu" class="hidden w-full flex-col gap-3 pt-4 md:flex md:flex-row md:items-center md:justify-end md:gap-5 md:pt-4" aria-label="Navegacion principal">
+					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#inicio">Inicio</a>
+					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#hitos">Menu</a>
+					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#caracteristicas">Experiencia</a>
+					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#contacto">Contacto</a>
+					<a class="inline-flex items-center justify-center rounded-full bg-brand-gold px-4 py-2 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow" href="#contenido-principal">
+						Reservar ahora
+					</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id="contenido-principal" class="mx-auto w-full max-w-4xl px-3 py-6 sm:px-6 sm:py-8 lg:px-8" role="main">
+			<section aria-labelledby="form-title" class="rounded-[1.5rem] border border-white/10 bg-brand-wine/80 p-4 shadow-glow backdrop-blur sm:rounded-[2rem] sm:p-6 lg:p-8">
+				<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Reservas</p>
+				<h1 id="form-title" class="mt-2 font-display text-4xl leading-tight text-brand-ink sm:text-5xl">Reserva tu mesa en Brasland</h1>
+				<p id="form-description" class="mt-4 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
+					Comparte tus datos, la fecha ideal y cualquier detalle especial para preparar una experiencia a tu medida.
+				</p>
+
+				<form
+					id="application-form"
+					class="mt-6 grid gap-5 sm:mt-8 sm:gap-6"
+					method="post"
+					action="#"
+					novalidate
+					aria-labelledby="form-title"
+					aria-describedby="form-description"
+					role="form"
+				>
+					<p class="text-xs text-white/60">Los campos marcados como obligatorios nos ayudan a confirmar tu reserva sin demoras.</p>
+
+					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="contacto-title">
+						<legend id="contacto-title" class="px-1 text-sm font-semibold text-brand-ink">Datos de contacto</legend>
+						<div class="mt-3 grid gap-5 sm:gap-6 md:grid-cols-2">
+							<div>
+								<label for="nombre" class="mb-2 block text-sm font-semibold text-brand-ink">Nombre completo</label>
+								<input
+									id="nombre"
+									name="nombre"
+									type="text"
+									autocomplete="name"
+									required
+									minlength="3"
+									aria-required="true"
+									aria-describedby="nombre-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+									placeholder="Ej: Maria Fernanda Rojas"
+								/>
+								<p id="nombre-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="correo" class="mb-2 block text-sm font-semibold text-brand-ink">Correo electronico</label>
+								<input
+									id="correo"
+									name="correo"
+									type="email"
+									autocomplete="email"
+									required
+									aria-required="true"
+									aria-describedby="correo-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+									placeholder="Ej: nombre@email.com"
+								/>
+								<p id="correo-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="negocio-title">
+						<legend id="negocio-title" class="px-1 text-sm font-semibold text-brand-ink">Detalles de la reserva</legend>
+						<div class="mt-3 grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
+							<div>
+								<label for="telefono" class="mb-2 block text-sm font-semibold text-brand-ink">Telefono</label>
+								<input
+									id="telefono"
+									name="telefono"
+									type="tel"
+									autocomplete="tel"
+									inputmode="tel"
+									required
+									pattern="^\+?[0-9\s()-]{7,}$"
+									aria-describedby="telefono-ayuda telefono-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+									placeholder="Ej: +57 300 123 4567"
+								/>
+								<p id="telefono-ayuda" class="mt-2 text-xs text-white/60">Lo usamos para confirmar la reserva o avisarte cualquier ajuste.</p>
+								<p id="telefono-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="fecha-demo" class="mb-2 block text-sm font-semibold text-brand-ink">Fecha de la reserva</label>
+								<input
+									id="fecha-demo"
+									name="fecha_demo"
+									type="date"
+									required
+									aria-describedby="fecha-demo-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+								/>
+								<p id="fecha-demo-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="sucursales" class="mb-2 block text-sm font-semibold text-brand-ink">Numero de comensales</label>
+								<input
+									id="sucursales"
+									name="sucursales"
+									type="number"
+									min="1"
+									step="1"
+									inputmode="numeric"
+									required
+									aria-describedby="sucursales-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+									placeholder="Ej: 4"
+								/>
+								<p id="sucursales-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="objetivo-title">
+						<legend id="objetivo-title" class="px-1 text-sm font-semibold text-brand-ink">Ocasion de tu visita</legend>
+						<div class="mt-3 grid gap-3 sm:grid-cols-2">
+							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
+								<input id="objetivo-pedidos" type="radio" name="objetivo" value="pedidos" required class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" checked />
+								<label for="objetivo-pedidos">Cena casual</label>
+							</div>
+							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
+								<input id="objetivo-fidelizacion" type="radio" name="objetivo" value="fidelizacion" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+								<label for="objetivo-fidelizacion">Celebracion</label>
+							</div>
+							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
+								<input id="objetivo-integraciones" type="radio" name="objetivo" value="integraciones" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+								<label for="objetivo-integraciones">Reunion o evento</label>
+							</div>
+							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
+								<input id="objetivo-todo" type="radio" name="objetivo" value="todo" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+								<label for="objetivo-todo">Experiencia completa</label>
+							</div>
+						</div>
+						<p id="objetivo-error" class="mt-4 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+					</fieldset>
+
+					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="detalle-title">
+						<legend id="detalle-title" class="px-1 text-sm font-semibold text-brand-ink">Notas para la reserva</legend>
+						<div class="mt-3">
+						<label for="mensaje" class="mb-2 block text-sm font-semibold text-brand-ink">Cuentanos tu plan</label>
+						<textarea
+							id="mensaje"
+							name="mensaje"
+							rows="5"
+							required
+							minlength="20"
+							aria-describedby="mensaje-ayuda mensaje-error"
+							class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+							placeholder="Ej: Celebramos un cumpleanos, somos 6 personas y queremos una mesa tranquila con opcion de postre especial."
+						></textarea>
+						<p id="mensaje-ayuda" class="mt-2 text-xs text-white/60">Puedes indicar alergias, celebraciones, silla para ninos o preferencias de ubicacion.</p>
+						<p id="mensaje-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+						</div>
+					</fieldset>
+
+					<div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+						<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+							<button
+								type="submit"
+								class="inline-flex w-full items-center justify-center rounded-full bg-brand-gold px-6 py-3.5 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-wine sm:w-auto"
+								aria-label="Enviar formulario para reservar mesa"
+							>
+								Confirmar reserva
+							</button>
+							<button
+								type="reset"
+								class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-brand-gold hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-wine sm:w-auto"
+								aria-label="Limpiar formulario de reservas"
+							>
+								Limpiar formulario
+							</button>
+						</div>
+						<a href="index.html" class="text-sm font-semibold text-white/80 hover:text-brand-gold" aria-label="Regresar a la pagina principal">
+							Volver a la landing
+						</a>
+					</div>
+
+					<p id="form-status" class="hidden rounded-xl border px-4 py-3 text-sm font-medium" role="status" aria-live="polite"></p>
+				</form>
+			</section>
+		</main>
+
+		<footer class="mx-auto w-full max-w-4xl px-4 pb-8 sm:px-6 lg:px-8" role="contentinfo">
+			<p class="border-t border-white/10 pt-5 text-sm text-white/55">Brasland 2026. Reservas, celebraciones y parrilla contemporanea.</p>
+		</footer>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuButton = document.getElementById("menu-toggle")
+				const menu = document.getElementById("site-menu")
+
+				if (menuButton && menu) {
+					const syncState = (expanded) => {
+						menuButton.setAttribute("aria-expanded", expanded ? "true" : "false")
+						menuButton.setAttribute("aria-label", expanded ? "Cerrar menu principal" : "Abrir menu principal")
+						menuButton.innerHTML = expanded
+							? '<span aria-hidden="true" class="text-xl leading-none">✕</span>'
+							: '<span aria-hidden="true" class="text-xl leading-none">☰</span>'
+					}
+
+					menuButton.addEventListener("click", function () {
+						const isHidden = menu.classList.contains("hidden")
+						menu.classList.toggle("hidden")
+						syncState(isHidden)
+					})
+
+					menu.querySelectorAll("a").forEach((link) => {
+						link.addEventListener("click", function () {
+							if (window.innerWidth < 768) {
+								menu.classList.add("hidden")
+								syncState(false)
+							}
+						})
+					})
+
+					window.addEventListener("resize", function () {
+						if (window.innerWidth >= 768) {
+							menu.classList.remove("hidden")
+							syncState(false)
+						} else {
+							menu.classList.add("hidden")
+							syncState(false)
+						}
+					})
+				}
+
+			})
+		</script>
+		<script src="validation.js"></script>
+	</body>
+</html>
+
