@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Reserva tu mesa en Brasland para disfrutar parrilla contemporanea, cocteleria de autor y una experiencia pensada para compartir."
+			content="Registrate en Brasa Points y acumula beneficios en cada visita a Brasland con un formulario de fidelizacion rapido y seguro."
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +38,7 @@
 				}
 			}
 		</script>
-		<title>Brasland | reservas</title>
+		<title>Brasland | registro de fidelizacion</title>
 	</head>
 	<body class="min-h-screen bg-brand-cream font-sans text-brand-ink antialiased">
 		<div class="fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
@@ -66,7 +66,7 @@
 						</span>
 						<span class="grid gap-0.5">
 							<strong class="text-sm uppercase tracking-[0.16em] text-white">Brasland</strong>
-							<span class="text-xs text-white/65">Reservas y eventos</span>
+							<span class="text-xs text-white/65">Fidelizacion y beneficios</span>
 						</span>
 					</a>
 
@@ -86,9 +86,10 @@
 					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#inicio">Inicio</a>
 					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#hitos">Menu</a>
 					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#caracteristicas">Experiencia</a>
+					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#brasa-points">Brasa Points</a>
 					<a class="text-sm font-semibold text-white/80 transition hover:text-brand-gold" href="index.html#contacto">Contacto</a>
 					<a class="inline-flex items-center justify-center rounded-full bg-brand-gold px-4 py-2 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow" href="#contenido-principal">
-						Reservar ahora
+						Registrarme ahora
 					</a>
 				</nav>
 			</div>
@@ -96,10 +97,10 @@
 
 		<main id="contenido-principal" class="mx-auto w-full max-w-4xl px-3 py-6 sm:px-6 sm:py-8 lg:px-8" role="main">
 			<section aria-labelledby="form-title" class="rounded-[1.5rem] border border-white/10 bg-brand-wine/80 p-4 shadow-glow backdrop-blur sm:rounded-[2rem] sm:p-6 lg:p-8">
-				<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Reservas</p>
-				<h1 id="form-title" class="mt-2 font-display text-4xl leading-tight text-brand-ink sm:text-5xl">Reserva tu mesa en Brasland</h1>
+				<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Brasa Points</p>
+				<h1 id="form-title" class="mt-2 font-display text-4xl leading-tight text-brand-ink sm:text-5xl">Registro de fidelizacion Brasland</h1>
 				<p id="form-description" class="mt-4 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
-					Comparte tus datos, la fecha ideal y cualquier detalle especial para preparar una experiencia a tu medida.
+					Completa todos los campos requeridos para activar tu cuenta, sumar puntos y desbloquear beneficios desde tu primera visita.
 				</p>
 
 				<form
@@ -112,10 +113,10 @@
 					aria-describedby="form-description"
 					role="form"
 				>
-					<p class="text-xs text-white/60">Los campos marcados como obligatorios nos ayudan a confirmar tu reserva sin demoras.</p>
+					<p class="text-xs text-white/60">Todos los campos de este formulario son obligatorios para completar el registro de fidelizacion.</p>
 
 					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="contacto-title">
-						<legend id="contacto-title" class="px-1 text-sm font-semibold text-brand-ink">Datos de contacto</legend>
+						<legend id="contacto-title" class="px-1 text-sm font-semibold text-brand-ink">Datos personales</legend>
 						<div class="mt-3 grid gap-5 sm:gap-6 md:grid-cols-2">
 							<div>
 								<label for="nombre" class="mb-2 block text-sm font-semibold text-brand-ink">Nombre completo</label>
@@ -135,6 +136,20 @@
 							</div>
 
 							<div>
+								<label for="fecha-nacimiento" class="mb-2 block text-sm font-semibold text-brand-ink">Fecha de nacimiento</label>
+								<input
+									id="fecha-nacimiento"
+									name="fecha_nacimiento"
+									type="date"
+									required
+									aria-required="true"
+									aria-describedby="fecha-nacimiento-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+								/>
+								<p id="fecha-nacimiento-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
 								<label for="correo" class="mb-2 block text-sm font-semibold text-brand-ink">Correo electronico</label>
 								<input
 									id="correo"
@@ -149,14 +164,9 @@
 								/>
 								<p id="correo-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
 							</div>
-						</div>
-					</fieldset>
 
-					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="negocio-title">
-						<legend id="negocio-title" class="px-1 text-sm font-semibold text-brand-ink">Detalles de la reserva</legend>
-						<div class="mt-3 grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
 							<div>
-								<label for="telefono" class="mb-2 block text-sm font-semibold text-brand-ink">Telefono</label>
+								<label for="telefono" class="mb-2 block text-sm font-semibold text-brand-ink">Telefono celular</label>
 								<input
 									id="telefono"
 									name="telefono"
@@ -164,86 +174,199 @@
 									autocomplete="tel"
 									inputmode="tel"
 									required
-									pattern="^\+?[0-9\s()-]{7,}$"
-									aria-describedby="telefono-ayuda telefono-error"
+									pattern="^\\+?[0-9\\s()-]{7,}$"
+									aria-describedby="telefono-error"
 									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
 									placeholder="Ej: +57 300 123 4567"
 								/>
-								<p id="telefono-ayuda" class="mt-2 text-xs text-white/60">Lo usamos para confirmar la reserva o avisarte cualquier ajuste.</p>
 								<p id="telefono-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
 							</div>
+						</div>
+					</fieldset>
 
+					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="negocio-title">
+						<legend id="negocio-title" class="px-1 text-sm font-semibold text-brand-ink">Datos de identificacion y ubicacion</legend>
+						<div class="mt-3 grid gap-5 sm:grid-cols-2 sm:gap-6">
 							<div>
-								<label for="fecha-demo" class="mb-2 block text-sm font-semibold text-brand-ink">Fecha de la reserva</label>
-								<input
-									id="fecha-demo"
-									name="fecha_demo"
-									type="date"
+								<label for="pais" class="mb-2 block text-sm font-semibold text-brand-ink">Pais de residencia</label>
+								<select
+									id="pais"
+									name="pais"
 									required
-									aria-describedby="fecha-demo-error"
+									aria-required="true"
+									aria-describedby="pais-error"
 									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
-								/>
-								<p id="fecha-demo-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+								>
+									<option value="">Selecciona tu pais</option>
+									<option value="colombia">Colombia</option>
+									<option value="estados-unidos">Estados Unidos</option>
+								</select>
+								<p id="pais-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
 							</div>
 
 							<div>
-								<label for="sucursales" class="mb-2 block text-sm font-semibold text-brand-ink">Numero de comensales</label>
-								<input
-									id="sucursales"
-									name="sucursales"
-									type="number"
-									min="1"
-									step="1"
-									inputmode="numeric"
+								<label for="tipo-documento" class="mb-2 block text-sm font-semibold text-brand-ink">Tipo de documento</label>
+								<select
+									id="tipo-documento"
+									name="tipo_documento"
 									required
-									aria-describedby="sucursales-error"
+									aria-required="true"
+									aria-describedby="tipo-documento-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+								>
+									<option value="">Selecciona una opcion</option>
+									<option value="cc">Cedula de ciudadania</option>
+									<option value="ce">Cedula de extranjeria</option>
+									<option value="pasaporte">Pasaporte</option>
+								</select>
+								<p id="tipo-documento-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="numero-documento" class="mb-2 block text-sm font-semibold text-brand-ink">Numero de documento</label>
+								<input
+									id="numero-documento"
+									name="numero_documento"
+									type="text"
+									required
+									minlength="5"
+									maxlength="20"
+									aria-describedby="numero-documento-error"
 									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
-									placeholder="Ej: 4"
+									placeholder="Ej: 1023456789"
 								/>
-								<p id="sucursales-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+								<p id="numero-documento-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="ciudad" class="mb-2 block text-sm font-semibold text-brand-ink">Ciudad de residencia</label>
+								<select
+									id="ciudad"
+									name="ciudad"
+									required
+									aria-required="true"
+									aria-describedby="ciudad-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+								>
+									<option value="">Selecciona tu ciudad</option>
+									<option value="bogota">Bogota</option>
+									<option value="medellin">Medellin</option>
+									<option value="miami">Miami</option>
+								</select>
+								<p id="ciudad-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="ubicacion" class="mb-2 block text-sm font-semibold text-brand-ink">Ubicacion o zona</label>
+								<input
+									id="ubicacion"
+									name="ubicacion"
+									type="text"
+									autocomplete="street-address"
+									required
+									minlength="5"
+									aria-describedby="ubicacion-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+									placeholder="Ej: Chapinero Alto"
+								/>
+								<p id="ubicacion-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="sucursal-favorita" class="mb-2 block text-sm font-semibold text-brand-ink">Sucursal favorita</label>
+								<select
+									id="sucursal-favorita"
+									name="sucursal_favorita"
+									required
+									aria-required="true"
+									aria-describedby="sucursal-favorita-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+								>
+									<option value="">Selecciona una sucursal</option>
+									<option value="bogota">Bogota - Chapinero Alto</option>
+									<option value="medellin">Medellin - El Poblado</option>
+									<option value="miami">Miami - Brickell</option>
+								</select>
+								<p id="sucursal-favorita-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
 							</div>
 						</div>
 					</fieldset>
 
 					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="objetivo-title">
-						<legend id="objetivo-title" class="px-1 text-sm font-semibold text-brand-ink">Ocasion de tu visita</legend>
+						<legend id="objetivo-title" class="px-1 text-sm font-semibold text-brand-ink">Preferencias del programa</legend>
 						<div class="mt-3 grid gap-3 sm:grid-cols-2">
 							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
-								<input id="objetivo-pedidos" type="radio" name="objetivo" value="pedidos" required class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" checked />
-								<label for="objetivo-pedidos">Cena casual</label>
+								<input id="objetivo-pedidos" type="radio" name="objetivo" value="beneficios-mesa" required class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" checked />
+								<label for="objetivo-pedidos">Beneficios en consumo de mesa</label>
 							</div>
 							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
-								<input id="objetivo-fidelizacion" type="radio" name="objetivo" value="fidelizacion" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
-								<label for="objetivo-fidelizacion">Celebracion</label>
+								<input id="objetivo-fidelizacion" type="radio" name="objetivo" value="beneficios-bar" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+								<label for="objetivo-fidelizacion">Beneficios en cocteleria y bar</label>
 							</div>
 							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
-								<input id="objetivo-integraciones" type="radio" name="objetivo" value="integraciones" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
-								<label for="objetivo-integraciones">Reunion o evento</label>
+								<input id="objetivo-integraciones" type="radio" name="objetivo" value="eventos" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+								<label for="objetivo-integraciones">Eventos y celebraciones</label>
 							</div>
 							<div class="inline-flex items-center gap-2.5 text-sm text-white/85">
 								<input id="objetivo-todo" type="radio" name="objetivo" value="todo" class="h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
-								<label for="objetivo-todo">Experiencia completa</label>
+								<label for="objetivo-todo">Todos los beneficios Brasa Points</label>
 							</div>
 						</div>
 						<p id="objetivo-error" class="mt-4 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
 					</fieldset>
 
 					<fieldset class="rounded-2xl border border-white/15 bg-black/20 p-4 sm:p-5" role="group" aria-labelledby="detalle-title">
-						<legend id="detalle-title" class="px-1 text-sm font-semibold text-brand-ink">Notas para la reserva</legend>
-						<div class="mt-3">
-						<label for="mensaje" class="mb-2 block text-sm font-semibold text-brand-ink">Cuentanos tu plan</label>
-						<textarea
-							id="mensaje"
-							name="mensaje"
-							rows="5"
-							required
-							minlength="20"
-							aria-describedby="mensaje-ayuda mensaje-error"
-							class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
-							placeholder="Ej: Celebramos un cumpleanos, somos 6 personas y queremos una mesa tranquila con opcion de postre especial."
-						></textarea>
-						<p id="mensaje-ayuda" class="mt-2 text-xs text-white/60">Puedes indicar alergias, celebraciones, silla para ninos o preferencias de ubicacion.</p>
-						<p id="mensaje-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+						<legend id="detalle-title" class="px-1 text-sm font-semibold text-brand-ink">Comunicacion y consentimientos</legend>
+						<div class="mt-3 grid gap-5 sm:gap-6">
+							<div>
+								<label for="canal" class="mb-2 block text-sm font-semibold text-brand-ink">Canal preferido de contacto</label>
+								<select
+									id="canal"
+									name="canal"
+									required
+									aria-required="true"
+									aria-describedby="canal-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+								>
+									<option value="">Selecciona un canal</option>
+									<option value="whatsapp">WhatsApp</option>
+									<option value="correo">Correo electronico</option>
+									<option value="llamada">Llamada telefonica</option>
+								</select>
+								<p id="canal-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div>
+								<label for="mensaje" class="mb-2 block text-sm font-semibold text-brand-ink">Perfil de consumo</label>
+								<textarea
+									id="mensaje"
+									name="mensaje"
+									rows="4"
+									required
+									minlength="20"
+									aria-describedby="mensaje-ayuda mensaje-error"
+									class="w-full rounded-xl border border-white/15 bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-brand-gold focus:bg-black/30 focus:ring-2 focus:ring-brand-gold/40 sm:text-base"
+									placeholder="Ej: Me interesan cenas de pareja, cocteleria de autor y celebraciones de cumpleanos."
+								></textarea>
+								<p id="mensaje-ayuda" class="mt-2 text-xs text-white/60">Este dato nos ayuda a personalizar tus beneficios y comunicaciones.</p>
+								<p id="mensaje-error" class="mt-2 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div class="rounded-xl border border-white/10 bg-black/20 p-4">
+								<div class="inline-flex items-start gap-3 text-sm text-white/85">
+									<input id="acepta-terminos" name="acepta_terminos" type="checkbox" required class="mt-0.5 h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+									<label for="acepta-terminos">Acepto los terminos y condiciones de Brasa Points.</label>
+								</div>
+								<p id="acepta-terminos-error" class="mt-3 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
+
+							<div class="rounded-xl border border-white/10 bg-black/20 p-4">
+								<div class="inline-flex items-start gap-3 text-sm text-white/85">
+									<input id="acepta-datos" name="acepta_datos" type="checkbox" required class="mt-0.5 h-4.5 w-4.5 accent-brand-gold focus-visible:ring-2 focus-visible:ring-brand-gold/50" />
+									<label for="acepta-datos">Autorizo el tratamiento de datos personales para gestionar mi cuenta de fidelizacion.</label>
+								</div>
+								<p id="acepta-datos-error" class="mt-3 hidden rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-200" role="alert"></p>
+							</div>
 						</div>
 					</fieldset>
 
@@ -252,14 +375,14 @@
 							<button
 								type="submit"
 								class="inline-flex w-full items-center justify-center rounded-full bg-brand-gold px-6 py-3.5 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-wine sm:w-auto"
-								aria-label="Enviar formulario para reservar mesa"
+								aria-label="Enviar formulario de registro de fidelizacion"
 							>
-								Confirmar reserva
+								Activar Brasa Points
 							</button>
 							<button
 								type="reset"
 								class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-brand-gold hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-wine sm:w-auto"
-								aria-label="Limpiar formulario de reservas"
+								aria-label="Limpiar formulario de fidelizacion"
 							>
 								Limpiar formulario
 							</button>
@@ -275,7 +398,7 @@
 		</main>
 
 		<footer class="mx-auto w-full max-w-4xl px-4 pb-8 sm:px-6 lg:px-8" role="contentinfo">
-			<p class="border-t border-white/10 pt-5 text-sm text-white/55">Brasland 2026. Reservas, celebraciones y parrilla contemporanea.</p>
+			<p class="border-t border-white/10 pt-5 text-sm text-white/55">Brasland 2026. Programa Brasa Points, beneficios y experiencias de fidelizacion.</p>
 		</footer>
 
 		<script>

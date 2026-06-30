@@ -6,20 +6,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const fields = {
 		nombre: document.getElementById("nombre"),
+		fecha_nacimiento: document.getElementById("fecha-nacimiento"),
 		correo: document.getElementById("correo"),
 		telefono: document.getElementById("telefono"),
-		fecha_demo: document.getElementById("fecha-demo"),
-		sucursales: document.getElementById("sucursales"),
+		pais: document.getElementById("pais"),
+		tipo_documento: document.getElementById("tipo-documento"),
+		numero_documento: document.getElementById("numero-documento"),
+		ciudad: document.getElementById("ciudad"),
+		ubicacion: document.getElementById("ubicacion"),
+		sucursal_favorita: document.getElementById("sucursal-favorita"),
+		canal: document.getElementById("canal"),
 		mensaje: document.getElementById("mensaje")
 	}
 
 	const radioGroup = Array.from(form.querySelectorAll('input[name="objetivo"]'))
+	const requiredChecks = {
+		acepta_terminos: document.getElementById("acepta-terminos"),
+		acepta_datos: document.getElementById("acepta-datos")
+	}
 	const today = new Date()
 	today.setHours(0, 0, 0, 0)
+	const minimumBirthDate = new Date(today)
+	minimumBirthDate.setFullYear(minimumBirthDate.getFullYear() - 18)
+	const locationBySucursal = {
+		bogota: { pais: "colombia", ciudad: "bogota" },
+		medellin: { pais: "colombia", ciudad: "medellin" },
+		miami: { pais: "estados-unidos", ciudad: "miami" }
+	}
 	let preserveStatusOnReset = false
 
-	if (fields.fecha_demo) {
-		fields.fecha_demo.min = today.toISOString().split("T")[0]
+	if (fields.fecha_nacimiento) {
+		fields.fecha_nacimiento.max = minimumBirthDate.toISOString().split("T")[0]
 	}
 
 	const setStatus = (message, type) => {
@@ -100,6 +117,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		radioGroup.forEach((radio) => radio.setAttribute("aria-invalid", "false"))
 	}
 
+	const setCheckState = (checkbox, errorId, message) => {
+		const errorNode = document.getElementById(errorId)
+		if (!checkbox || !errorNode) return false
+
+		if (message) {
+			errorNode.textContent = message
+			errorNode.classList.remove("hidden")
+			checkbox.setAttribute("aria-invalid", "true")
+			return false
+		}
+
+		errorNode.textContent = ""
+		errorNode.classList.add("hidden")
+		checkbox.setAttribute("aria-invalid", "false")
+		return true
+	}
+
+	const clearCheckState = (checkbox, errorId) => {
+		setCheckState(checkbox, errorId, "")
+	}
+
 	const validateNombre = () => {
 		const value = fields.nombre.value.trim()
 
@@ -123,6 +161,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		return setFieldState(fields.correo, "correo-error", "")
 	}
 
+	const validateFechaNacimiento = () => {
+		const value = fields.fecha_nacimiento.value
+
+		if (!value) return setFieldState(fields.fecha_nacimiento, "fecha-nacimiento-error", "Selecciona tu fecha de nacimiento.")
+
+		const selectedDate = new Date(value + "T00:00:00")
+		if (Number.isNaN(selectedDate.getTime())) {
+			return setFieldState(fields.fecha_nacimiento, "fecha-nacimiento-error", "La fecha de nacimiento no es valida.")
+		}
+
+		if (selectedDate > minimumBirthDate) {
+			return setFieldState(fields.fecha_nacimiento, "fecha-nacimiento-error", "Debes ser mayor de edad para registrarte en Brasa Points.")
+		}
+
+		return setFieldState(fields.fecha_nacimiento, "fecha-nacimiento-error", "")
+	}
+
 	const validateTelefono = () => {
 		const value = fields.telefono.value.trim()
 		const digits = value.replace(/\D/g, "")
@@ -136,31 +191,107 @@ document.addEventListener("DOMContentLoaded", function () {
 		return setFieldState(fields.telefono, "telefono-error", "")
 	}
 
-	const validateFecha = () => {
-		const value = fields.fecha_demo.value
+	const validatePais = () => {
+		const value = fields.pais.value.trim()
 
-		if (!value) return setFieldState(fields.fecha_demo, "fecha-demo-error", "Selecciona una fecha para tu reserva.")
+		if (!value) return setFieldState(fields.pais, "pais-error", "Selecciona tu pais de residencia.")
 
-		const selectedDate = new Date(value + "T00:00:00")
-		if (Number.isNaN(selectedDate.getTime())) {
-			return setFieldState(fields.fecha_demo, "fecha-demo-error", "La fecha seleccionada no es valida.")
-		}
-		if (selectedDate < today) {
-			return setFieldState(fields.fecha_demo, "fecha-demo-error", "La fecha debe ser hoy o posterior.")
-		}
-
-		return setFieldState(fields.fecha_demo, "fecha-demo-error", "")
+		return setFieldState(fields.pais, "pais-error", "")
 	}
 
-	const validateSucursales = () => {
-		const value = fields.sucursales.value.trim()
-		const parsed = Number(value)
+	const validateTipoDocumento = () => {
+		const value = fields.tipo_documento.value.trim()
 
-		if (!value) return setFieldState(fields.sucursales, "sucursales-error", "Indica cuantas personas asistiran.")
-		if (!Number.isInteger(parsed)) return setFieldState(fields.sucursales, "sucursales-error", "Ingresa un numero entero de comensales.")
-		if (parsed < 1) return setFieldState(fields.sucursales, "sucursales-error", "El numero de comensales debe ser mayor o igual a 1.")
+		if (!value) return setFieldState(fields.tipo_documento, "tipo-documento-error", "Selecciona tu tipo de documento.")
 
-		return setFieldState(fields.sucursales, "sucursales-error", "")
+		return setFieldState(fields.tipo_documento, "tipo-documento-error", "")
+	}
+
+	const validateNumeroDocumento = () => {
+		const value = fields.numero_documento.value.trim()
+
+		if (!value) return setFieldState(fields.numero_documento, "numero-documento-error", "Ingresa tu numero de documento.")
+		if (value.length < 5) return setFieldState(fields.numero_documento, "numero-documento-error", "El numero de documento debe tener al menos 5 caracteres.")
+		if (!/^[A-Za-z0-9-]+$/.test(value)) {
+			return setFieldState(fields.numero_documento, "numero-documento-error", "Usa solo letras, numeros o guiones.")
+		}
+
+		return setFieldState(fields.numero_documento, "numero-documento-error", "")
+	}
+
+	const validateCiudad = () => {
+		const value = fields.ciudad.value.trim()
+
+		if (!value) return setFieldState(fields.ciudad, "ciudad-error", "Selecciona tu ciudad de residencia.")
+
+		return setFieldState(fields.ciudad, "ciudad-error", "")
+	}
+
+	const validateUbicacion = () => {
+		const value = fields.ubicacion.value.trim()
+
+		if (!value) return setFieldState(fields.ubicacion, "ubicacion-error", "Ingresa tu ubicacion o zona.")
+		if (value.length < 5) return setFieldState(fields.ubicacion, "ubicacion-error", "La ubicacion debe tener al menos 5 caracteres.")
+		if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s'.#,-]+$/.test(value)) {
+			return setFieldState(fields.ubicacion, "ubicacion-error", "La ubicacion contiene caracteres no permitidos.")
+		}
+
+		return setFieldState(fields.ubicacion, "ubicacion-error", "")
+	}
+
+	const validateSucursalFavorita = () => {
+		const value = fields.sucursal_favorita.value.trim()
+
+		if (!value) return setFieldState(fields.sucursal_favorita, "sucursal-favorita-error", "Selecciona tu sucursal favorita.")
+
+		return setFieldState(fields.sucursal_favorita, "sucursal-favorita-error", "")
+	}
+
+	const validateCountryCityLocation = () => {
+		const sucursal = fields.sucursal_favorita.value.trim()
+		const pais = fields.pais.value.trim()
+		const ciudad = fields.ciudad.value.trim()
+
+		if (!sucursal || !pais || !ciudad) return true
+
+		const expected = locationBySucursal[sucursal]
+		if (!expected) return true
+
+		if (pais !== expected.pais || ciudad !== expected.ciudad) {
+			setFieldState(fields.pais, "pais-error", "Pais y ciudad deben coincidir con la sucursal seleccionada.")
+			setFieldState(fields.ciudad, "ciudad-error", "Ciudad incompatible con la sucursal favorita.")
+			setFieldState(fields.sucursal_favorita, "sucursal-favorita-error", "Ajusta sucursal, pais o ciudad para que coincidan.")
+			return false
+		}
+
+		setFieldState(fields.pais, "pais-error", "")
+		setFieldState(fields.ciudad, "ciudad-error", "")
+		setFieldState(fields.sucursal_favorita, "sucursal-favorita-error", "")
+		return true
+	}
+
+	const validateCanal = () => {
+		const value = fields.canal.value.trim()
+
+		if (!value) return setFieldState(fields.canal, "canal-error", "Selecciona un canal de contacto.")
+
+		return setFieldState(fields.canal, "canal-error", "")
+	}
+
+	const validateAceptaTerminos = () => {
+		if (!requiredChecks.acepta_terminos.checked) {
+			return setCheckState(requiredChecks.acepta_terminos, "acepta-terminos-error", "Debes aceptar los terminos y condiciones para continuar.")
+		}
+
+		return setCheckState(requiredChecks.acepta_terminos, "acepta-terminos-error", "")
+	}
+
+	const validateAceptaDatos = () => {
+		if (!requiredChecks.acepta_datos.checked) {
+			return setCheckState(requiredChecks.acepta_datos, "acepta-datos-error", "Debes autorizar el tratamiento de datos para activar tu cuenta.")
+		}
+
+		return setCheckState(requiredChecks.acepta_datos, "acepta-datos-error", "")
 	}
 
 	const validateObjetivo = () => {
@@ -172,9 +303,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const validateMensaje = () => {
 		const value = fields.mensaje.value.trim()
 
-		if (!value) return setFieldState(fields.mensaje, "mensaje-error", "Comparte cualquier detalle importante para tu reserva.")
+		if (!value) return setFieldState(fields.mensaje, "mensaje-error", "Comparte cualquier detalle importante para tu perfil.")
 		if (value.length < 20) {
-			return setFieldState(fields.mensaje, "mensaje-error", "Describe tu reserva con al menos 20 caracteres.")
+			return setFieldState(fields.mensaje, "mensaje-error", "Describe tu perfil con al menos 20 caracteres.")
 		}
 
 		return setFieldState(fields.mensaje, "mensaje-error", "")
@@ -182,12 +313,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const validators = {
 		nombre: validateNombre,
+		fecha_nacimiento: validateFechaNacimiento,
 		correo: validateCorreo,
 		telefono: validateTelefono,
-		fecha_demo: validateFecha,
-		sucursales: validateSucursales,
+		pais: validatePais,
+		tipo_documento: validateTipoDocumento,
+		numero_documento: validateNumeroDocumento,
+		ciudad: validateCiudad,
+		ubicacion: validateUbicacion,
+		sucursal_favorita: validateSucursalFavorita,
+		canal: validateCanal,
 		mensaje: validateMensaje,
-		objetivo: validateObjetivo
+		objetivo: validateObjetivo,
+		acepta_terminos: validateAceptaTerminos,
+		acepta_datos: validateAceptaDatos
 	}
 
 	const validateFieldByName = (name) => {
@@ -199,12 +338,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	const validateForm = () => {
 		const results = [
 			validateNombre(),
+			validateFechaNacimiento(),
 			validateCorreo(),
 			validateTelefono(),
-			validateFecha(),
-			validateSucursales(),
+			validatePais(),
+			validateTipoDocumento(),
+			validateNumeroDocumento(),
+			validateCiudad(),
+			validateUbicacion(),
+			validateSucursalFavorita(),
+			validateCountryCityLocation(),
+			validateCanal(),
 			validateObjetivo(),
-			validateMensaje()
+			validateMensaje(),
+			validateAceptaTerminos(),
+			validateAceptaDatos()
 		]
 
 		return results.every(Boolean)
@@ -213,11 +361,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	Object.entries(fields).forEach(([name, field]) => {
 		field.addEventListener("input", function () {
 			validateFieldByName(name)
+			validateCountryCityLocation()
 			clearStatus()
 		})
 
 		field.addEventListener("blur", function () {
 			validateFieldByName(name)
+			validateCountryCityLocation()
 		})
 	})
 
@@ -232,6 +382,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 	})
 
+	Object.entries(requiredChecks).forEach(([name, checkbox]) => {
+		checkbox.addEventListener("change", function () {
+			validateFieldByName(name)
+			clearStatus()
+		})
+
+		checkbox.addEventListener("blur", function () {
+			validateFieldByName(name)
+		})
+	})
+
 	form.addEventListener("reset", function () {
 		window.setTimeout(function () {
 			if (!preserveStatusOnReset) {
@@ -239,11 +400,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 
 			clearFieldState(fields.nombre, "nombre-error")
+			clearFieldState(fields.fecha_nacimiento, "fecha-nacimiento-error")
 			clearFieldState(fields.correo, "correo-error")
 			clearFieldState(fields.telefono, "telefono-error")
-			clearFieldState(fields.fecha_demo, "fecha-demo-error")
-			clearFieldState(fields.sucursales, "sucursales-error")
+			clearFieldState(fields.pais, "pais-error")
+			clearFieldState(fields.tipo_documento, "tipo-documento-error")
+			clearFieldState(fields.numero_documento, "numero-documento-error")
+			clearFieldState(fields.ciudad, "ciudad-error")
+			clearFieldState(fields.ubicacion, "ubicacion-error")
+			clearFieldState(fields.sucursal_favorita, "sucursal-favorita-error")
+			clearFieldState(fields.canal, "canal-error")
 			clearFieldState(fields.mensaje, "mensaje-error")
+			clearCheckState(requiredChecks.acepta_terminos, "acepta-terminos-error")
+			clearCheckState(requiredChecks.acepta_datos, "acepta-datos-error")
 			clearRadioState()
 			preserveStatusOnReset = false
 		}, 0)
@@ -254,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		clearStatus()
 
 		if (!validateForm()) {
-			setStatus("Revisa los campos marcados antes de confirmar tu reserva.", "error")
+			setStatus("Revisa los campos obligatorios para completar tu registro de fidelizacion.", "error")
 			const firstInvalid = form.querySelector('[aria-invalid="true"]')
 			if (firstInvalid) firstInvalid.focus()
 			return
@@ -262,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		preserveStatusOnReset = true
 		form.reset()
-		setStatus("Reserva enviada. Te confirmaremos tu mesa dentro de las proximas 24 horas.", "success")
+		setStatus("Registro enviado. Tu cuenta Brasa Points fue activada correctamente.", "success")
 	})
 })
 
