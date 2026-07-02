@@ -1,537 +1,263 @@
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="Brasland es una parrilla contemporanea con cortes al fuego, cocteleria de autor y reservas para vivir una experiencia completa en Bogota y Miami."
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script>
-			tailwind.config = {
-				theme: {
-                // colors of the page
-                    extend: {
-						fontFamily: {
-							sans: ["Manrope", "sans-serif"],
-							display: ["Playfair Display", "serif"]
-						},
-						colors: {
-							brand: {
-								cream: "#0f172a",
-								clay: "#0ea5a3",
-								wine: "#1e293b",
-								gold: "#38bdf8",
-								ink: "#e2e8f0"
-							}
-						},
-						boxShadow: {
-							glow: "0 25px 70px rgba(0, 0, 0, 0.45)"
-						}
-					}
-				}
-			}
-		</script>
-		<title>Brasland | parrilla contemporanea y reservas</title>
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "LocalBusiness",
-				"name": "Brasaland",
-				"description": "Parrilla contemporanea con cortes premium, cocteleria de autor y reservas para almuerzos, cenas y celebraciones.",
-				"url": "./",
-				"email": "hola@brasaland.com",
-				"telephone": "+57 300 123 4567",
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "Carrera 45 #120-18",
-					"addressLocality": "Bogota",
-					"addressCountry": "CO"
-				},
-				"areaServed": [
-					{
-						"@type": "Country",
-						"name": "Colombia"
-					},
-					{
-						"@type": "AdministrativeArea",
-						"name": "Florida"
-					}
-				],
-				"servesCuisine": "Parrilla contemporanea"
-			}
-		</script>
-	</head>
-	<body class="min-h-screen bg-brand-cream font-sans text-brand-ink antialiased">
-		<div class="fixed inset-0 -z-10 overflow-hidden">
-			<div class="absolute left-[-8rem] top-[-6rem] h-72 w-72 rounded-full bg-brand-gold/15 blur-3xl"></div>
-			<div class="absolute right-[-6rem] top-24 h-80 w-80 rounded-full bg-brand-clay/15 blur-3xl"></div>
-			<div class="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(180deg,rgba(5,8,12,0.96)_0%,rgba(11,17,24,0.88)_52%,rgba(11,17,24,0)_100%)]"></div>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Brasaland: carnes a la brasa desde 2008 en Colombia y Estados Unidos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"],
+              display: ["Playfair Display", "serif"]
+            },
+            colors: {
+              brand: {
+                night: "#0f172a",
+                mist: "#e2e8f0",
+                ink: "#102132",
+                ember: "#cf4a12",
+                gold: "#efb241",
+                cream: "#fff5e6",
+                pine: "#345345",
+                wine: "#1e293b",
+                clay: "#0ea5a3"
+              }
+            },
+            boxShadow: {
+              card: "0 20px 45px rgba(16, 33, 50, 0.16)",
+              glow: "0 25px 70px rgba(0, 0, 0, 0.45)"
+            }
+          }
+        }
+      }
+    </script>
+    <title>Brasaland | El sabor de la brasa</title>
+  </head>
+  <body class="bg-brand-cream font-sans text-brand-ink antialiased">
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -left-16 top-0 h-72 w-72 rounded-full bg-brand-gold/20 blur-3xl"></div>
+      <div class="absolute right-0 top-40 h-80 w-80 rounded-full bg-brand-ember/20 blur-3xl"></div>
+      <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand-pine/15 blur-3xl"></div>
+    </div>
 
-		<a
-			href="#contenido-principal"
-			class="absolute left-4 top-4 z-50 -translate-y-[220%] rounded-full bg-brand-ink px-4 py-3 text-sm font-semibold text-black transition focus:translate-y-0"
-		>
-			Saltar al contenido principal
-		</a>
+    <a
+      href="#contenido-principal"
+      class="absolute left-4 top-4 z-50 -translate-y-[220%] rounded-full bg-brand-ink px-4 py-3 text-sm font-semibold text-white transition focus:translate-y-0"
+      >Saltar al contenido principal</a
+    >
 
-		<header class="sticky top-0 z-40 mx-auto w-full max-w-7xl rounded-b-3xl border-x border-b border-white/10 bg-black/45 px-4 py-4 backdrop-blur-xl sm:px-6 md:py-6 lg:px-8">
-			<div class="flex items-center justify-between gap-4">
-				<a class="inline-flex items-center gap-4" href="#inicio" aria-label="Ir al inicio de Brasland">
-					<span
-						class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-gold to-brand-clay text-sm font-extrabold tracking-[0.18em] text-white shadow-glow"
-						aria-hidden="true"
-					>
-						BR
-					</span>
-					<span class="grid gap-0.5">
-						<strong class="text-sm uppercase tracking-[0.18em] text-white sm:text-base">Brasland</strong>
-						<span class="text-sm text-white/70">Parrilla contemporanea, fuego lento y noches memorables</span>
-					</span>
-				</a>
+    <header class="sticky top-0 z-40 border-b border-brand-ink/10 bg-brand-cream/90 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#inicio" class="inline-flex items-center gap-3" aria-label="Ir al inicio de Brasaland">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-brand-ember text-sm font-extrabold tracking-[0.12em] text-white">BR</span>
+          <strong class="text-lg uppercase tracking-[0.12em]">Brasaland</strong>
+        </a>
 
-				<button
-					id="menu-toggle"
-					type="button"
-					class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white transition hover:border-brand-gold hover:text-brand-gold md:hidden"
-					aria-expanded="false"
-					aria-controls="site-menu"
-					aria-label="Abrir menu principal"
-				>
-					<span aria-hidden="true" class="text-xl leading-none">☰</span>
-				</button>
-			</div>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brand-ink/20 md:hidden"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Abrir menú principal"
+        >
+          <span aria-hidden="true" class="text-xl leading-none">☰</span>
+        </button>
 
-			<nav id="site-menu" class="hidden w-full flex-col gap-4 pt-4 md:flex md:flex-row md:items-center md:justify-end md:gap-4 md:pt-5" aria-label="Navegacion principal">
-				<ul class="grid gap-3 rounded-[1.5rem] border border-white/15 bg-white/5 p-3 text-sm font-semibold text-white backdrop-blur sm:grid-cols-2 md:flex md:flex-wrap md:items-center md:gap-x-5 md:gap-y-3 md:px-5 md:py-3">
-					<li><a class="transition hover:text-brand-gold" href="#inicio">Inicio</a></li>
-					<li><a class="transition hover:text-brand-gold" href="#hitos">Menu</a></li>
-					<li><a class="transition hover:text-brand-gold" href="#caracteristicas">Experiencia</a></li>
-					<li><a class="transition hover:text-brand-gold" href="#brasa-points">Brasa Points</a></li>
-					<li><a class="transition hover:text-brand-gold" href="#recursos">Sucursales</a></li>
-					<li><a class="transition hover:text-brand-gold" href="#contacto">Contacto</a></li>
-				</ul>
-				<a
-					class="inline-flex w-full items-center justify-center rounded-full bg-brand-gold px-5 py-3 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow md:w-auto"
-					href="application.html"
-				>
-					Reservar mesa
-				</a>
-			</nav>
-		</header>
+        <nav id="site-menu" class="hidden w-full flex-col gap-4 pt-4 md:flex md:w-auto md:flex-row md:items-center md:pt-0" aria-label="Navegación principal">
+          <div class="flex items-center gap-2 rounded-full border border-brand-ink/10 bg-white px-3 py-1 text-sm font-bold">
+            <button type="button" class="rounded-full bg-brand-ink px-2 py-1 text-white" aria-label="Idioma español">ES</button>
+            <span class="text-brand-ink/40">|</span>
+            <button type="button" class="px-2 py-1 text-brand-ink/70" aria-label="Idioma inglés">EN</button>
+          </div>
+          <ul class="grid gap-2 text-sm font-semibold md:flex md:items-center md:gap-5">
+            <li><a href="#inicio" class="transition hover:text-brand-ember">Inicio</a></li>
+            <li><a href="#ubicaciones" class="transition hover:text-brand-ember">Ubicaciones</a></li>
+            <li><a href="#menu" class="transition hover:text-brand-ember">Menú</a></li>
+            <li><a href="#brasa-points" class="transition hover:text-brand-ember">Brasa Points</a></li>
+            <li><a href="#contacto" class="transition hover:text-brand-ember">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-		<main id="contenido-principal" class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-			<section id="inicio" class="grid items-center gap-8 py-10 md:gap-10 md:py-14 xl:grid-cols-[minmax(0,1.35fr)_minmax(340px,0.9fr)] xl:gap-14 xl:py-20" aria-labelledby="hero-title">
-				<div>
-					<p class="mb-5 inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white backdrop-blur">
-						Bogota, Medellin y Miami con servicio de reservas
-					</p>
-					<h1 id="hero-title" class="max-w-none font-display text-4xl leading-tight text-white sm:max-w-[11ch] sm:text-6xl lg:text-7xl xl:text-[5.6rem]">
-						Cortes al fuego, cocteles de autor y una mesa lista para la noche perfecta.
-					</h1>
-					<p class="mt-6 max-w-2xl text-base leading-7 text-white/78 sm:text-lg sm:leading-8">
-						Brasland mezcla parrilla latinoamericana, producto premium y una atmosfera elegante para cenas, celebraciones y almuerzos largos con sabor a brasa real.
-					</p>
-					<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-						<a class="inline-flex w-full items-center justify-center rounded-full bg-brand-gold px-6 py-4 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow sm:w-auto" href="application.html">
-							Reservar ahora
-						</a>
-						<a class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:shadow-glow sm:w-auto" href="#hitos">
-							Ver menu destacado
-						</a>
-					</div>
-					<div class="mt-8 grid gap-3 sm:grid-cols-3">
-						<div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-							<strong class="block text-2xl font-extrabold text-white">4.8/5</strong>
-							<span class="mt-1 block text-sm text-white/65">Valoracion media de comensales</span>
-						</div>
-						<div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-							<strong class="block text-2xl font-extrabold text-white">12h - 11:30pm</strong>
-							<span class="mt-1 block text-sm text-white/65">Cocina abierta todos los dias</span>
-						</div>
-						<div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-							<strong class="block text-2xl font-extrabold text-white">Private dining</strong>
-							<span class="mt-1 block text-sm text-white/65">Espacios para grupos y eventos</span>
-						</div>
-					</div>
-				</div>
+    <main id="contenido-principal" class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section id="inicio" class="py-14 md:py-20" aria-labelledby="hero-title">
+        <div class="rounded-[2rem] border border-brand-ink/10 bg-white/80 p-8 shadow-card md:p-12">
+          <h1 id="hero-title" class="font-display text-4xl leading-tight md:text-6xl">El sabor de la brasa, en cada bocado</h1>
+          <p class="mt-5 max-w-4xl text-base leading-7 text-brand-ink/85 md:text-lg">
+            Desde 2008 sirviendo las mejores carnes a la brasa en Colombia y Estados Unidos. 14 ubicaciones, una misma pasión por la calidad y el sabor.
+          </p>
+          <a
+            href="#formulario-brasa-points"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-brand-ember px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5"
+            >Únete a Brasa Points</a
+          >
+        </div>
+      </section>
 
-				<aside class="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 text-white shadow-glow backdrop-blur" aria-label="Resumen de experiencia Brasland">
-					<div class="relative aspect-[4/5] overflow-hidden border-b border-white/10">
-						<img
-							src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
-							alt="Mesa servida con carnes a la parrilla, vegetales y copas en un ambiente calido"
-							class="h-full w-full object-cover"
-							loading="eager"
-						/>
-						<div class="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent"></div>
-						<div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-							<div class="mb-3 inline-flex rounded-full bg-brand-gold px-3 py-1 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-wine">Chef pick</div>
-							<h2 class="max-w-sm text-2xl font-extrabold text-white sm:text-3xl">Brasa viva, platos abundantes y una mesa que invita a quedarse.</h2>
-						</div>
-					</div>
-					<ul class="grid gap-4 p-5 sm:p-7">
-						<li class="rounded-2xl border border-white/10 bg-black/10 p-4">
-							<strong class="mb-1 block text-base font-bold">Entrada de la casa</strong>
-							<span class="block text-white/75">Provoleta ahumada, pan de masa madre y chimichurri fresco para abrir la mesa.</span>
-						</li>
-						<li class="rounded-2xl border border-white/10 bg-black/10 p-4">
-							<strong class="mb-1 block text-base font-bold">Corte estrella</strong>
-							<span class="block text-white/75">Ribeye madurado con papas crocantes y mantequilla de ajo tostado.</span>
-						</li>
-						<li class="rounded-2xl border border-white/10 bg-black/10 p-4">
-							<strong class="mb-1 block text-base font-bold">Final dulce</strong>
-							<span class="block text-white/75">Tarta tibia de cacao con helado artesanal y sal marina.</span>
-						</li>
-					</ul>
-				</aside>
-			</section>
+      <section id="menu" class="py-10 md:py-14" aria-labelledby="historia-title">
+        <div class="grid items-center gap-6 md:grid-cols-2 md:gap-10">
+          <div>
+            <p class="mb-2 text-sm font-bold uppercase tracking-[0.14em] text-brand-ember">Nuestra Historia</p>
+            <h2 id="historia-title" class="font-display text-3xl md:text-4xl">Una historia nacida en Medellín</h2>
+            <p class="mt-4 leading-7 text-brand-ink/85">
+              Fundada en Medellín en 2008, Brasaland comenzó como un sueño familiar: compartir el auténtico sabor de la carne a la brasa con calidad constante y servicio cálido. Hoy somos 14 restaurantes en dos países, pero mantenemos la misma receta de éxito: productos frescos, técnicas tradicionales, y pasión por cada plato que servimos.
+            </p>
+          </div>
+          <div class="overflow-hidden rounded-[2rem] border border-brand-ink/10 shadow-card">
+            <img
+              src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1400&q=80"
+              alt="Equipo preparando carnes a la brasa en cocina"
+              class="h-full min-h-[260px] w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-			<section id="hitos" class="py-8 md:py-10" aria-labelledby="titulo-hitos">
-				<div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-					<div>
-						<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Menu destacado</p>
-						<h2 id="titulo-hitos" class="mt-2 font-display text-3xl text-brand-ink sm:text-4xl">Platos pensados para quedarse en la memoria</h2>
-					</div>
-					<p class="max-w-xl text-sm leading-6 text-white/70">Carnes premium, brasas lentas y acompanamientos con protagonismo propio para almuerzo, cena o celebracion.</p>
-				</div>
-				<div class="mt-6 grid gap-4 md:grid-cols-3">
-					<article class="overflow-hidden rounded-[2rem] border border-white/10 bg-brand-wine/75 shadow-glow">
-						<div class="aspect-[4/3] overflow-hidden">
-							<img
-								src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
-								alt="Corte de carne a la parrilla servido sobre tabla con vegetales"
-								class="h-full w-full object-cover transition duration-500 hover:scale-105"
-								loading="lazy"
-							/>
-						</div>
-						<div class="p-5 sm:p-6">
-						<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">01</p>
-						<h3 class="mt-3 text-xl font-bold text-brand-ink">Bife brasland</h3>
-						<p class="mt-2 text-white/70">Corte grueso sellado al carbon, jugo de la casa y vegetales de temporada.</p>
-						<p class="mt-4 text-sm font-bold text-brand-gold">$68.000</p>
-						</div>
-					</article>
+      <section class="py-10 md:py-14" aria-labelledby="unicos-title">
+        <div class="mb-6">
+          <h2 id="unicos-title" class="font-display text-3xl md:text-4xl">Lo que nos hace únicos</h2>
+        </div>
+        <div class="grid gap-4 md:grid-cols-3">
+          <article class="rounded-[1.5rem] border border-brand-ink/10 bg-white/85 p-6 shadow-card">
+            <h3 class="text-xl font-bold">1. Calidad Consistente</h3>
+            <ul class="mt-3 space-y-2 text-brand-ink/85">
+              <li>Mismas recetas y estándares en todos los locales</li>
+              <li>Ingredientes frescos seleccionados diariamente</li>
+            </ul>
+          </article>
+          <article class="rounded-[1.5rem] border border-brand-ink/10 bg-white/85 p-6 shadow-card">
+            <h3 class="text-xl font-bold">2. Experiencia Cálida</h3>
+            <ul class="mt-3 space-y-2 text-brand-ink/85">
+              <li>Servicio amable y atento</li>
+              <li>Ambiente familiar en cada visita</li>
+            </ul>
+          </article>
+          <article class="rounded-[1.5rem] border border-brand-ink/10 bg-white/85 p-6 shadow-card">
+            <h3 class="text-xl font-bold">3. Rapidez</h3>
+            <ul class="mt-3 space-y-2 text-brand-ink/85">
+              <li>Tu comida lista en minutos</li>
+              <li>Sin sacrificar sabor ni calidad</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-					<article class="overflow-hidden rounded-[2rem] border border-brand-gold/20 bg-brand-wine text-white shadow-glow">
-						<div class="aspect-[4/3] overflow-hidden">
-							<img
-								src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80"
-								alt="Plato principal servido con ingredientes frescos y terminado a la brasa"
-								class="h-full w-full object-cover transition duration-500 hover:scale-105"
-								loading="lazy"
-							/>
-						</div>
-						<div class="p-5 sm:p-6">
-						<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-gold">02</p>
-						<h3 class="mt-3 text-xl font-bold">Pulpo a las brasas</h3>
-						<p class="mt-2 text-white/72">Terminado con mantequilla citrica, pure rustico y aceite de pimenton ahumado.</p>
-						<p class="mt-4 text-sm font-bold text-brand-gold">$59.000</p>
-						</div>
-					</article>
+      <section id="ubicaciones" class="py-10 md:py-14" aria-labelledby="ubicaciones-title">
+        <div class="mb-6">
+          <h2 id="ubicaciones-title" class="font-display text-3xl md:text-4xl">Nuestras Ubicaciones</h2>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="rounded-[1.5rem] border border-brand-ink/10 bg-white/85 p-6 shadow-card">
+            <h3 class="text-2xl font-bold">Colombia</h3>
+            <p class="mt-3 text-brand-ink/85">10 restaurantes en Medellín, Bogotá y Cali</p>
+            <p class="mt-2 text-brand-ink/85">Horario: Lun-Dom 11:00 - 22:00</p>
+          </article>
+          <article class="rounded-[1.5rem] border border-brand-ink/10 bg-white/85 p-6 shadow-card">
+            <h3 class="text-2xl font-bold">Estados Unidos (Florida)</h3>
+            <p class="mt-3 text-brand-ink/85">4 restaurantes en Miami y Orlando</p>
+            <p class="mt-2 text-brand-ink/85">Horario: Mon-Sun 11:00 AM - 10:00 PM</p>
+          </article>
+        </div>
+      </section>
 
-					<article class="overflow-hidden rounded-[2rem] border border-white/10 bg-brand-wine/75 shadow-glow">
-						<div class="aspect-[4/3] overflow-hidden">
-							<img
-								src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
-								alt="Hamburguesa artesanal jugosa con queso fundido y pan dorado"
-								class="h-full w-full object-cover transition duration-500 hover:scale-105"
-								loading="lazy"
-							/>
-						</div>
-						<div class="p-5 sm:p-6">
-						<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">03</p>
-						<h3 class="mt-3 text-xl font-bold text-brand-ink">Hamburguesa de autor</h3>
-						<p class="mt-2 text-white/70">Carne smash, queso madurado, cebolla crocante y salsa secreta de la brasa.</p>
-						<p class="mt-4 text-sm font-bold text-brand-gold">$42.000</p>
-						</div>
-					</article>
-				</div>
-			</section>
+      <section id="brasa-points" class="py-10 md:py-14" aria-labelledby="brasa-title">
+        <div class="rounded-[2rem] border border-brand-gold/50 bg-gradient-to-br from-brand-ember to-[#a73f10] p-8 text-white shadow-card md:p-10">
+          <h2 id="brasa-title" class="font-display text-3xl md:text-4xl">Brasa Points</h2>
+          <ul class="mt-5 space-y-3 text-white/95">
+            <li>Gana puntos con cada visita</li>
+            <li>Acumula 1 punto por cada $10.000 COP o $5 USD</li>
+            <li>Canjea tus puntos por descuentos y platos gratis</li>
+            <li>Ofertas exclusivas para miembros</li>
+            <li>Registro 100% digital - ¡ya no más tarjetas de papel!</li>
+          </ul>
+          <form id="formulario-brasa-points" class="mt-7 grid gap-3 rounded-2xl bg-white/10 p-4 md:grid-cols-[1fr_auto]" aria-label="Formulario de registro a Brasa Points">
+            <label for="email" class="sr-only">Correo electrónico</label>
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="Tu correo para unirte a Brasa Points"
+              class="w-full rounded-xl border border-white/40 bg-white/90 px-4 py-3 text-brand-ink placeholder:text-brand-ink/60 focus:outline-none"
+            />
+            <button type="submit" class="rounded-xl bg-brand-gold px-5 py-3 text-sm font-bold text-brand-ink">Unirme ahora</button>
+          </form>
+        </div>
+      </section>
 
-			<section class="py-12 md:py-14" aria-labelledby="titulo-galeria">
-				<div class="mb-7 max-w-4xl">
-					<p class="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Galeria</p>
-					<h2 id="titulo-galeria" class="font-display text-3xl leading-tight text-brand-ink sm:text-4xl xl:text-5xl">
-						Imagenes que venden el antojo antes del primer bocado
-					</h2>
-				</div>
-				<div class="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
-					<div class="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-glow">
-						<img
-							src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
-							alt="Tabla abundante con carnes, vegetales asados y salsas servidas al centro"
-							class="h-full min-h-[320px] w-full object-cover"
-							loading="lazy"
-						/>
-						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-6">
-							<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-gold">Compartir</p>
-							<p class="mt-2 max-w-md text-lg font-semibold text-white">Platos pensados para que la mesa se vea generosa, caliente y memorable.</p>
-						</div>
-					</div>
-					<div class="grid gap-4">
-						<div class="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-glow">
-							<img
-								src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80"
-								alt="Postre gourmet servido con cacao y helado sobre plato oscuro"
-								class="h-64 w-full object-cover"
-								loading="lazy"
-							/>
-						</div>
-						<div class="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-glow">
-							<img
-								src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80"
-								alt="Cocteles servidos sobre barra iluminada para acompanar la cena"
-								class="h-64 w-full object-cover"
-								loading="lazy"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
+      <section id="contacto" class="py-10 md:py-14" aria-labelledby="contacto-title">
+        <div class="rounded-[1.5rem] border border-brand-ink/10 bg-white/85 p-6 shadow-card md:p-8">
+          <h2 id="contacto-title" class="font-display text-3xl md:text-4xl">Contacto</h2>
+          <ul class="mt-5 space-y-3 text-brand-ink/90">
+            <li>Email: hola@brasaland.com</li>
+            <li>Colombia: +57 4 123 4567</li>
+            <li>Florida: +1 305 123 4567</li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-			<section id="caracteristicas" class="py-12 md:py-14" aria-labelledby="titulo-caracteristicas">
-				<div class="mb-7 max-w-4xl">
-					<p class="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Experiencia brasland</p>
-					<h2 id="titulo-caracteristicas" class="font-display text-3xl leading-tight text-brand-ink sm:text-4xl xl:text-5xl">
-						Una noche de parrilla contemporanea con ritmo, luz y cocina abierta
-					</h2>
-				</div>
+    <footer class="border-t border-brand-ink/10 py-8">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <small>© 2025 Brasaland. Todos los derechos reservados.</small>
+        <p>Instagram | Facebook</p>
+      </div>
+    </footer>
 
-				<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-					<article class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6">
-						<div class="mb-4 inline-flex rounded-full bg-brand-clay/10 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Fuego</div>
-						<h3 class="text-xl font-bold text-brand-ink">Cocina al carbon</h3>
-						<p class="mt-3 text-white/70">Cortes, vegetales y mariscos con sabor profundo, sellado real y tecnica precisa.</p>
-					</article>
-					<article class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6">
-						<div class="mb-4 inline-flex rounded-full bg-brand-gold/20 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-wine">Bar</div>
-						<h3 class="text-xl font-bold text-brand-ink">Cocteleria de autor</h3>
-						<p class="mt-3 text-white/70">Tragos citricos, ahumados y clasicos reimaginados para abrir o cerrar la mesa.</p>
-					</article>
-					<article class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6">
-						<div class="mb-4 inline-flex rounded-full bg-brand-clay/10 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Sala</div>
-						<h3 class="text-xl font-bold text-brand-ink">Ambiente cuidado</h3>
-						<p class="mt-3 text-white/70">Musica, iluminacion y servicio con ritmo para que cada visita se sienta especial.</p>
-					</article>
-					<article class="rounded-[2rem] border border-brand-clay/10 bg-brand-wine p-5 text-white shadow-glow sm:p-6 md:col-span-2 xl:col-span-1">
-						<div class="mb-4 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-gold">Eventos</div>
-						<h3 class="text-xl font-bold">Mesas para celebrar</h3>
-						<p class="mt-3 text-white/72">Cumpleanos, cenas de equipo y reuniones privadas con menu acordado y servicio dedicado.</p>
-					</article>
-				</div>
-			</section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-toggle")
+        const menu = document.getElementById("site-menu")
 
-			<section id="como-funciona" class="py-12 md:py-14" aria-labelledby="titulo-como-funciona">
-				<div class="mb-7 max-w-4xl">
-					<p class="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Tu visita</p>
-					<h2 id="titulo-como-funciona" class="font-display text-3xl leading-tight text-brand-ink sm:text-4xl xl:text-5xl">
-						Del primer brindis al ultimo bocado, cada parte de la experiencia tiene su momento
-					</h2>
-				</div>
-				<ol class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-					<li class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6">
-						<strong class="mb-3 block text-base font-bold text-brand-clay">1. Reserva</strong>
-						<p class="text-white/70">Elige fecha, numero de personas y cuentanos si celebras algo especial.</p>
-					</li>
-					<li class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6">
-						<strong class="mb-3 block text-base font-bold text-brand-clay">2. Brinda</strong>
-						<p class="text-white/70">Empieza con cocteleria de autor, vinos por copa o aperitivos de la casa.</p>
-					</li>
-					<li class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6">
-						<strong class="mb-3 block text-base font-bold text-brand-clay">3. Comparte</strong>
-						<p class="text-white/70">La mesa se llena de entradas, cortes y acompanamientos para ir al centro.</p>
-					</li>
-					<li class="rounded-[2rem] border border-brand-clay/10 bg-brand-gold/20 p-5 shadow-glow sm:p-6 md:col-span-2 xl:col-span-1">
-						<strong class="mb-3 block text-base font-bold text-brand-wine">4. Vuelve</strong>
-						<p class="text-brand-wine/80">Postres, sobremesa y servicio que dan ganas de reservar de nuevo.</p>
-					</li>
-				</ol>
-			</section>
+        if (!menuButton || !menu) return
 
-			<section id="brasa-points" class="py-12 md:py-14" aria-labelledby="titulo-brasa-points">
-				<div class="rounded-[2rem] border border-brand-gold/20 bg-brand-wine p-6 shadow-glow sm:p-8">
-					<div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-						<div>
-							<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-gold">Programa de fidelidad</p>
-							<h2 id="titulo-brasa-points" class="mt-2 font-display text-3xl text-white sm:text-4xl">Brasa Points: cada visita suma, cada punto regresa a tu mesa</h2>
-						</div>
-						<p class="max-w-xl text-sm leading-6 text-white/72">Acumula puntos en reservas, consumo en sala y eventos privados para canjear cortes premium, cocteles y beneficios exclusivos.</p>
-					</div>
+        const syncState = (expanded) => {
+          menuButton.setAttribute("aria-expanded", expanded ? "true" : "false")
+          menuButton.setAttribute("aria-label", expanded ? "Cerrar menú principal" : "Abrir menú principal")
+          menuButton.innerHTML = expanded
+            ? '<span aria-hidden="true" class="text-xl leading-none">✕</span>'
+            : '<span aria-hidden="true" class="text-xl leading-none">☰</span>'
+        }
 
-					<div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-						<article class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 sm:p-6">
-							<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Como ganas</p>
-							<h3 class="mt-2 text-lg font-bold text-brand-ink">1 punto por cada $1.000</h3>
-							<p class="mt-3 text-sm leading-6 text-white/70">Suma en consumo de cocina, bar y postres. Los puntos se acreditan al cerrar tu cuenta.</p>
-						</article>
-						<article class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 sm:p-6">
-							<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Nivel asador</p>
-							<h3 class="mt-2 text-lg font-bold text-brand-ink">Desde 250 puntos</h3>
-							<p class="mt-3 text-sm leading-6 text-white/70">Entrada de la casa sin costo y prioridad para reservar los fines de semana.</p>
-						</article>
-						<article class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 sm:p-6">
-							<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Nivel fuego alto</p>
-							<h3 class="mt-2 text-lg font-bold text-brand-ink">Desde 600 puntos</h3>
-							<p class="mt-3 text-sm leading-6 text-white/70">Coctel de autor para dos personas y upgrade de corte en fechas seleccionadas.</p>
-						</article>
-						<article class="rounded-[1.75rem] border border-brand-gold/25 bg-brand-gold/20 p-5 sm:p-6">
-							<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-wine">Canje rapido</p>
-							<h3 class="mt-2 text-lg font-bold text-brand-wine">100 puntos = $10.000</h3>
-							<p class="mt-3 text-sm leading-6 text-brand-wine/80">Canjea desde la segunda visita y combina beneficios en consumo de mesa o bar.</p>
-						</article>
-					</div>
+        menuButton.addEventListener("click", function () {
+          const isHidden = menu.classList.contains("hidden")
+          menu.classList.toggle("hidden")
+          syncState(isHidden)
+        })
 
-					<div class="mt-6 flex flex-col gap-3 rounded-[1.5rem] border border-white/10 bg-black/20 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
-						<p class="text-sm font-semibold text-white/85">Activa tu cuenta Brasa Points en menos de un minuto y recibe 50 puntos de bienvenida.</p>
-						<a class="inline-flex items-center justify-center rounded-full bg-brand-gold px-5 py-3 text-sm font-bold text-brand-wine transition hover:-translate-y-0.5 hover:shadow-glow" href="application.html">
-							Quiero mis Brasa Points
-						</a>
-					</div>
-				</div>
-			</section>
+        menu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", function () {
+            if (window.innerWidth < 768) {
+              menu.classList.add("hidden")
+              syncState(false)
+            }
+          })
+        })
 
-			<aside id="recursos" class="py-12 md:py-14" aria-label="Sucursales y experiencias disponibles">
-				<div class="rounded-[2rem] border border-white/10 bg-brand-wine/70 p-6 shadow-glow sm:p-8">
-					<div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-						<div>
-							<p class="text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Sucursales</p>
-							<h2 class="mt-2 font-display text-3xl text-brand-ink sm:text-4xl">Tres espacios, la misma brasa y un ambiente propio en cada ciudad</h2>
-						</div>
-						<p class="max-w-xl text-sm leading-6 text-white/70">Desde almuerzos ejecutivos hasta cenas de celebracion o eventos privados, Brasland adapta la experiencia a cada plan.</p>
-					</div>
-					<ul class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-						<li>
-							<div class="block rounded-[1.75rem] border border-white/10 bg-black/20 p-5 shadow-glow sm:p-6">
-								<span class="block text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Bogota</span>
-								<span class="mt-2 block text-lg font-bold text-brand-ink">Chapinero Alto</span>
-								<span class="mt-3 block text-sm leading-6 text-white/70">Ideal para cenas largas, after office y encuentros con musica suave y barra protagonista.</span>
-							</div>
-						</li>
-						<li>
-							<div class="block rounded-[1.75rem] border border-white/10 bg-black/20 p-5 shadow-glow sm:p-6">
-								<span class="block text-xs font-extrabold uppercase tracking-[0.16em] text-brand-clay">Medellin</span>
-								<span class="mt-2 block text-lg font-bold text-brand-ink">El Poblado</span>
-								<span class="mt-3 block text-sm leading-6 text-white/70">Salon amplio para grupos, almuerzos de negocio y fines de semana en familia.</span>
-							</div>
-						</li>
-						<li class="md:col-span-2 xl:col-span-1">
-							<a class="block rounded-[1.75rem] border border-brand-clay/10 bg-brand-wine p-5 shadow-glow transition hover:-translate-y-1 sm:p-6" href="application.html">
-								<span class="block text-xs font-extrabold uppercase tracking-[0.16em] text-brand-gold">Miami</span>
-								<span class="mt-2 block text-lg font-bold text-white">Brickell nights</span>
-								<span class="mt-3 block text-sm leading-6 text-white/72">Reserva para cenas, celebraciones y grupos que quieren una parrilla con acento latino.</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</aside>
-		</main>
-
-		<footer id="contacto" class="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-			<div class="max-w-4xl">
-				<p class="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-brand-clay">Contacto</p>
-				<h2 class="font-display text-3xl leading-tight text-brand-ink sm:text-4xl xl:text-5xl">Reserva tu mesa, planea tu celebracion o preguntanos por eventos privados.</h2>
-				<p class="mt-3 text-white/70">Estamos listos para recibirte con cocina al fuego, servicio atento y una experiencia que vale la salida completa.</p>
-				<a class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-brand-clay px-6 py-4 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-glow sm:w-auto" href="application.html">
-					Ir al formulario de reservas
-				</a>
-			</div>
-
-			<div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-				<section class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6" aria-labelledby="footer-contacto-title">
-					<h3 id="footer-contacto-title" class="mb-4 text-lg font-bold text-brand-ink">Canales de contacto</h3>
-					<address class="space-y-2 not-italic text-white/70">
-						<p><a class="transition hover:text-brand-clay" href="tel:+573001234567">+57 300 123 4567</a></p>
-						<p><a class="transition hover:text-brand-clay" href="mailto:hola@brasland.com">hola@brasland.com</a></p>
-						<p>Carrera 45 #120-18, Bogota, Colombia</p>
-					</address>
-				</section>
-
-				<section class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6" aria-labelledby="footer-horario-title">
-					<h3 id="footer-horario-title" class="mb-4 text-lg font-bold text-brand-ink">Horarios</h3>
-					<div class="space-y-2 text-white/70">
-						<p>Lunes a jueves: 12:00 - 22:30</p>
-						<p>Viernes a sabado: 12:00 - 00:00</p>
-						<p>Domingo: 12:00 - 18:00</p>
-					</div>
-				</section>
-
-				<section class="rounded-[2rem] border border-white/10 bg-brand-wine/75 p-5 shadow-glow sm:p-6" aria-labelledby="footer-sucursales-title">
-					<h3 id="footer-sucursales-title" class="mb-4 text-lg font-bold text-brand-ink">Sucursales destacadas</h3>
-					<div class="space-y-2 text-white/70">
-						<p>Bogota - Chapinero Alto</p>
-						<p>Medellin - El Poblado</p>
-						<p>Miami - Brickell</p>
-					</div>
-				</section>
-
-				<nav class="rounded-[2rem] border border-brand-clay/10 bg-brand-wine p-5 text-white shadow-glow sm:p-6" aria-labelledby="footer-nav-title">
-					<h3 id="footer-nav-title" class="mb-4 text-lg font-bold">Explora</h3>
-					<ul class="grid gap-3 text-white/78">
-						<li><a class="transition hover:text-brand-gold" href="#inicio">Inicio</a></li>
-						<li><a class="transition hover:text-brand-gold" href="#hitos">Menu</a></li>
-						<li><a class="transition hover:text-brand-gold" href="#caracteristicas">Experiencia</a></li>
-						<li><a class="transition hover:text-brand-gold" href="#brasa-points">Brasa Points</a></li>
-						<li><a class="transition hover:text-brand-gold" href="#recursos">Sucursales</a></li>
-						<li><a class="transition hover:text-brand-gold" href="application.html">Reservas</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
-				<small>&copy; 2026 Brasland. Todos los derechos reservados.</small>
-				<p>Brasa lenta, producto premium y una mesa hecha para compartir.</p>
-			</div>
-		</footer>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const menuButton = document.getElementById("menu-toggle")
-				const menu = document.getElementById("site-menu")
-
-				if (!menuButton || !menu) return
-
-				const syncState = (expanded) => {
-					menuButton.setAttribute("aria-expanded", expanded ? "true" : "false")
-					menuButton.setAttribute("aria-label", expanded ? "Cerrar menu principal" : "Abrir menu principal")
-					menuButton.innerHTML = expanded
-						? '<span aria-hidden="true" class="text-xl leading-none">✕</span>'
-						: '<span aria-hidden="true" class="text-xl leading-none">☰</span>'
-				}
-
-				menuButton.addEventListener("click", function () {
-					const isHidden = menu.classList.contains("hidden")
-					menu.classList.toggle("hidden")
-					syncState(isHidden)
-				})
-
-				menu.querySelectorAll("a").forEach((link) => {
-					link.addEventListener("click", function () {
-						if (window.innerWidth < 768) {
-							menu.classList.add("hidden")
-							syncState(false)
-						}
-					})
-				})
-
-				window.addEventListener("resize", function () {
-					if (window.innerWidth >= 768) {
-						menu.classList.remove("hidden")
-						syncState(false)
-					} else {
-						menu.classList.add("hidden")
-						syncState(false)
-					}
-				})
-			})
-		</script>
-	</body>
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 768) {
+            menu.classList.remove("hidden")
+            syncState(false)
+          } else {
+            menu.classList.add("hidden")
+            syncState(false)
+          }
+        })
+      })
+    </script>
+  </body>
 </html>

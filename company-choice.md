@@ -1,4 +1,4 @@
-### Brasland, cadena de restaurant fundada el año 2008 la cual actualmente cuenta con 14 sucursales, no solo en Colombia, tambien se ha amplido a EEUU en el estado de Florida, siendo una empresa que entrega 115 puestos de trabajo, facturando cerca de los 6 millones de dolares anualmente.  
+### Brasaland, cadena de restaurant fundada el año 2008 la cual actualmente cuenta con 14 sucursales, no solo en Colombia, tambien se ha amplido a EEUU en el estado de Florida, siendo una empresa que entrega 115 puestos de trabajo, facturando cerca de los 6 millones de dolares anualmente.  
 
 ## He decidido por esta compañia pues:
 1. Me he desempeñado años dentro del rubro gastronomico, dentro del servicio al cliente como garzon. 

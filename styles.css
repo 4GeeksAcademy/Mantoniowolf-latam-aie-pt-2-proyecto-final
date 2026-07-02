@@ -1,11 +1,12 @@
 :root {
-	--color-cream: #f8fafc;
-	--color-sand: #e2e8f0;
-	--color-terracotta: #0ea5a3;
-	--color-charcoal: #0f172a;
-	--color-gold: #38bdf8;
+	--color-cream: #fff5e6;
+	--color-sand: #f7e9cc;
+	--color-terracotta: #cf4a12;
+	--color-charcoal: #102132;
+	--color-gold: #efb241;
+	--color-pine: #345345;
 	--color-white: #ffffff;
-	--shadow-soft: 0 18px 40px rgba(38, 24, 20, 0.14);
+	--shadow-soft: 0 18px 40px rgba(16, 33, 50, 0.14);
 }
 
 * {
@@ -14,12 +15,13 @@
 
 body {
 	margin: 0;
-	font-family: "Segoe UI", sans-serif;
+	font-family: "Manrope", sans-serif;
 	line-height: 1.6;
 	color: var(--color-charcoal);
 	background:
-		radial-gradient(circle at top right, rgba(56, 189, 248, 0.2), transparent 30%),
-		linear-gradient(180deg, #f8fafc 0%, var(--color-cream) 52%, #eef2ff 100%);
+		radial-gradient(circle at top right, rgba(239, 178, 65, 0.22), transparent 32%),
+		radial-gradient(circle at 18% 78%, rgba(207, 74, 18, 0.12), transparent 35%),
+		linear-gradient(180deg, #fffaf0 0%, var(--color-cream) 55%, #ffe9c7 100%);
 }
 
 body > a:first-child {
@@ -64,7 +66,7 @@ footer {
 	width: 3rem;
 	height: 3rem;
 	border-radius: 18px;
-	background: linear-gradient(135deg, var(--color-terracotta), #c96c40);
+	background: linear-gradient(135deg, var(--color-terracotta), var(--color-pine));
 	color: var(--color-white);
 	font-weight: 800;
 	letter-spacing: 0.08em;
@@ -84,7 +86,7 @@ footer {
 
 .brand__text span {
 	font-size: 0.9rem;
-	color: rgba(38, 24, 20, 0.72);
+	color: rgba(16, 33, 50, 0.72);
 }
 
 .site-nav {
@@ -127,7 +129,7 @@ a {
 	margin: 0 0 1rem;
 	padding: 0.45rem 0.8rem;
 	border-radius: 999px;
-	background: rgba(163, 71, 47, 0.1);
+	background: rgba(207, 74, 18, 0.1);
 	color: var(--color-terracotta);
 	font-weight: 700;
 }
@@ -177,14 +179,14 @@ a {
 }
 
 .button--secondary {
-	background: rgba(38, 24, 20, 0.06);
-	border: 1px solid rgba(38, 24, 20, 0.12);
+	background: rgba(16, 33, 50, 0.06);
+	border: 1px solid rgba(16, 33, 50, 0.12);
 }
 
 .hero__panel {
 	padding: 1.75rem;
 	background: rgba(255, 253, 249, 0.86);
-	border: 1px solid rgba(38, 24, 20, 0.08);
+	border: 1px solid rgba(16, 33, 50, 0.08);
 	border-radius: 24px;
 	box-shadow: var(--shadow-soft);
 	backdrop-filter: blur(10px);
@@ -206,7 +208,7 @@ a {
 
 .hero__panel li {
 	padding-bottom: 1rem;
-	border-bottom: 1px solid rgba(38, 24, 20, 0.08);
+	border-bottom: 1px solid rgba(16, 33, 50, 0.08);
 }
 
 .hero__panel li:last-child {
@@ -229,7 +231,7 @@ a {
 }
 
 .info-section--alt {
-	border-top: 1px solid rgba(38, 24, 20, 0.08);
+	border-top: 1px solid rgba(16, 33, 50, 0.08);
 }
 
 .section-heading {
@@ -263,7 +265,7 @@ a {
 	padding: 1.5rem;
 	border-radius: 22px;
 	background: rgba(255, 253, 249, 0.8);
-	border: 1px solid rgba(38, 24, 20, 0.08);
+	border: 1px solid rgba(16, 33, 50, 0.08);
 	box-shadow: var(--shadow-soft);
 }
 
@@ -276,7 +278,7 @@ a {
 .feature-card p,
 .step-card p {
 	margin: 0;
-	color: rgba(38, 24, 20, 0.82);
+	color: rgba(16, 33, 50, 0.82);
 }
 
 .steps-list {
@@ -303,7 +305,7 @@ footer {
 
 .site-footer {
 	padding: 3.5rem 0 2.5rem;
-	border-top: 1px solid rgba(38, 24, 20, 0.08);
+	border-top: 1px solid rgba(16, 33, 50, 0.08);
 }
 
 .site-footer__intro {
@@ -319,7 +321,7 @@ footer {
 
 .site-footer__intro p:last-child {
 	margin: 0;
-	color: rgba(38, 24, 20, 0.8);
+	color: rgba(16, 33, 50, 0.8);
 }
 
 .site-footer__cta {
@@ -337,7 +339,7 @@ footer {
 	padding: 1.5rem;
 	border-radius: 22px;
 	background: rgba(255, 253, 249, 0.82);
-	border: 1px solid rgba(38, 24, 20, 0.08);
+	border: 1px solid rgba(16, 33, 50, 0.08);
 	box-shadow: var(--shadow-soft);
 }
 
@@ -351,7 +353,7 @@ footer {
 .footer-card address {
 	margin: 0;
 	font-style: normal;
-	color: rgba(38, 24, 20, 0.82);
+	color: rgba(16, 33, 50, 0.82);
 }
 
 .footer-card p + p,
@@ -373,8 +375,8 @@ footer {
 	justify-content: space-between;
 	gap: 1rem;
 	padding-top: 1.25rem;
-	border-top: 1px solid rgba(38, 24, 20, 0.08);
-	color: rgba(38, 24, 20, 0.72);
+	border-top: 1px solid rgba(16, 33, 50, 0.08);
+	color: rgba(16, 33, 50, 0.72);
 	font-size: 0.95rem;
 }
 
